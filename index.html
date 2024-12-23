@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Waybill Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">AIR WAYBILL</h1>
+        <label class="top">MAVIS (IATA CODE) -</label>
+        <table>
+            <tbody>
+                <!-- first table column -->
+                <tr>
+                    <td rowspan="4" style="border-right: none;">
+                        <label style="margin-bottom: 5px;">Shipper's Name and Address:</label>
+                        <textarea rows="10" placeholder="Write Here..."></textarea> 
+                    </td>
+                    <td>
+                        <label style="margin-bottom: 5px;">Shipper's Account Number:</label>
+                        <input type="number" name="ship_acc_no" id="ship_acc_no" placeholder="Acc No">
+                    </td>
+                    <td rowspan="3" style="border-right: none; position: relative;">
+                        <label>Not Negotiables:</label>
+                        <p>Air Waybill</p>
+                        <div class="issued-by-container">
+                            <p class="issued-by">Issued by:</p>
+                            <img src="img/air_logo.png" alt="Company Logo" class="company-logo">
+                        </div>
+                    </td>
+                                       
+                </tr>
+                <tr>
+                    <td style="border: none; visibility: hidden;">
+                        <label>Shipper's</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: none; visibility: hidden;">
+                        <label>Account</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: none; visibility: hidden;">
+                        <label>Number:</label>
+                    </td>
+                    <td style="border-right: none;">
+                        <label style="margin-bottom: 5px;">Copies 1, 2 & 3:</label>
+                        <textarea placeholder="Copies 1, 2 & 3"></textarea>
+                    </td>
+                </tr>
+                <!-- second table column -->
+                <tr>
+                    <td rowspan="4" style="border-right: none;">
+                        <label style="margin-bottom: 5px;">Shipper's Name and Address:</label>
+                        <textarea rows="8" placeholder="Write Here..."></textarea> 
+                    </td>
+                    <td>
+                        <label style="margin-bottom: 5px;">Consignee's Account Number:</label>
+                        <input type="number" name="cons_acc_no" id="cons_acc_no" placeholder="Acc No">
+                    </td>
+                    <td rowspan="4" style="border-right: none; ">
+                        <!-- <label for="">Accounting Information:</label> -->
+                        <textarea style="margin-top: 15px;" rows="8"></textarea>   
+                    </td>                
+                </tr>
+                <tr rowspan="3">
+                    <td style="border: none; visibility: hidden;">
+                        <label>Shipper's</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: none; visibility: hidden;">
+                        <label>Account</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: none; visibility: hidden;">
+                        <label>Number:</label>
+                    </td>
+                </tr>
+                <!-- third table column -->
+                <tr>
+                    <td colspan="2" style="border-right: none;">
+                        <label style="margin-bottom: 5px;">Issuing Carrier's Agent Name and City:</label>
+                        <textarea rows="4" placeholder="Write here..."></textarea>                        
+                    </td>
+                    <!-- <td style="border-left: none; border-bottom: none;">
+                    </td> -->
+                    <td rowspan="3" style="border-right: none; ">
+                        <label style="margin-bottom: 25px;">Accounting Information:</label>
+                        <textarea rows="12"></textarea> 
+                    </td>                  
+                </tr>
+                <tr>
+                    <td>
+                        <label style="margin-bottom: 3px;">Agents IATA Code:</label>
+                        <input type="number" name="agent_code" id="agent_code" placeholder="Agents IATA Code:">
+                    </td>
+                    <td>
+                        <label style="margin-bottom: 3px;">Account No:</label>
+                        <input type="number" name="agent_code" id="agent_code" placeholder="Account No:">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label style="margin-bottom: 3px;">Airport of Departure (Addr. of first Carrier) and Required Routing:</label>
+                        <textarea placeholder="Write Here..."></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- fourth table column -->
+        <div class="routing-details">
+            <table>
+                <thead>
+                    <tr>
+                        <td class="equal-width">To
+                            <textarea placeholder="" rows="6"></textarea>
+                        </td>
+                        <td class="wide-column" colspan="10">By First Carrier [Routing and Destination]
+                            <textarea placeholder="" rows="5"></textarea>
+                        </td>
+                        <td class="equal-width">To
+                            <textarea placeholder="" rows="6"></textarea>
+                        </td>
+                        <td class="equal-width">By
+                            <textarea placeholder="" rows="6"></textarea>
+                        </td>
+                        <td class="equal-width">To
+                            <textarea placeholder="" rows="6"></textarea>
+                        </td>
+
+                        <td class="equal-width">By
+                            <textarea placeholder="" rows="6"></textarea>
+                        </td>
+
+                        <td class="equal-width">Currency
+                            <select style="margin-top: 20px; height: 50px;" id="currency" name="currency">
+                                <option value="CHF">CHG</option>
+                                <option value="SFR">SFR</option>
+                                <option value="OTHER">OTHER</option>
+                            </select>
+                        </td>
+                        <td class="equal-width">CHF $
+                            <input style="margin-top: 20px; height: 50px;" type="number" name="" id="">
+                        </td>
+                        <td class="equal-width">[WT/VAL] PPD
+                            <textarea placeholder="" rows="4"></textarea>
+                        </td>
+                        <td class="equal-width">[WT/VAL] COLL
+                            <textarea placeholder="" rows="4"></textarea>
+                        </td>
+                        <td class="equal-width">[OTHER] PPD
+                            <textarea placeholder="" rows="4"></textarea>
+                        </td>
+                        <td class="equal-width">[OTHER] COLL
+                            <textarea placeholder="" rows="4"></textarea>
+                        </td>
+                        <td style="border-right: none; padding: 0 15px;"></td>
+                    </tr>
+                </thead>
+                <!-- fifth table column -->
+                <tbody>
+                    <tr>
+                        <td colspan="12">
+                            <label style="margin-bottom: 5px;">Airport of Destination:</label>
+                            <textarea placeholder="Write Here..." rows="5"></textarea>
+                        </td>
+                        <td colspan="2" style="text-align: center;">
+                            <p>[For Carrier Use Only]</p>
+                            <p>Flight Date</p> <input style="margin-top: 5px; height: 40px;" type="date">
+                        </td>
+                        <td colspan="2" style="text-align: center;">
+                            <p>[For Carrier Use Only]</p>
+                            <p>Flight Date</p> <input style="margin-top: 5px; height: 40px;" type="date">
+                        </td>
+                        <td colspan="3">
+                            <label style="margin-bottom: 5px;">Amount of Insurance:</label>
+                            <textarea placeholder="Write Here..." rows="5"></textarea>
+                        </td>
+                        <td colspan="3" style="border-right: none;">
+                            <label style="margin-bottom: 5px;">INSURANCE:</label>
+                            <textarea placeholder="Write Here..." rows="5"></textarea>
+                        </td>
+                    </tr>
+                    <!-- sixth table column -->
+                    <tr>
+                        <td colspan="22" style="border-right: none;">
+                            <label for="">Handling Information</label>
+                            <textarea placeholder="Handling Information" rows="5"></textarea>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+        <!-- seventh table column -->
+        <div class="routing-details">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <label for="">No of</label>
+                            <p>Pieces</p>
+                            <p>RCP</p>
+                        </th>
+                        <th>
+                            <label for="">Gross</label>
+                            <p>Weight</p>
+                        </th>
+                        <th>
+                            <label for="">Kg</label>
+                            <p>lb</p>
+                        </th>
+                        <th style="border-bottom: none;">
+                        </th>
+                        <th style="border-bottom: none;">
+                            <!-- <label for="">Rate</label>
+                            <p>Class</p> -->
+                        </th>
+                        <th>
+                            <label for="">Commodity</label>
+                            <p>Mem No.</p>
+                        </th>
+                        <th style="border-bottom: none;">
+                        </th>
+                        <th>
+                            <label for="">Chargeable</label>
+                            <label for="">Weight</label>
+                        </th>
+                        <th style="border-bottom: none;">
+                        </th>
+                        <th>
+                            <label for="">Rate / Charge</label>
+                        </th>
+                        <th style="border-bottom: none;">
+                        </th>
+                        <th>
+                            <label for="">Total</label>
+                        </th>
+                    </tr>
+                </thead>
+                <!-- eighth table column -->
+                <tbody>
+                    <tr>
+                        <td style="border-bottom: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                    </tr>
+                    <!-- ninth table column -->
+                    <tr>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                    </tr>
+                    <!-- tenth table column -->
+                    <tr>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                    </tr>
+                    <!-- tenth table column -->
+                    <tr>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                    </tr>
+                    <!-- eleventh table column -->
+                    <tr>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                    </tr>
+                    <!-- twelveth table column -->
+                    <tr>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                    </tr>
+                    <!-- 13 table column -->
+                    <tr>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                    </tr>
+                    <!-- 14 table column -->
+                    <tr>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                    </tr>
+                    <!-- 15 table column -->
+                    <tr>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                        </td>
+                        <td style="border-bottom: none; border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                    </tr>
+                    <!-- 16 table column -->
+                    <tr>
+                        <td>
+                            <input type="number" name="" id="">
+                        </td>
+                        <td>
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-top: none;">
+                        </td>
+                        <td style="border-top: none;">
+                        </td>
+                        <td style="border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-top: none;">
+                        </td>
+                        <td style="border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-top: none;">
+                        </td>
+                        <td style="border-top: none;">
+                            <input type="number" name="" id="">
+                        </td>
+                        <td style="border-top: none;">
+                        </td>
+                        <td>
+                            <input type="number" name="" id="">
+                        </td>
+                    </tr>
+                    <!-- 17 table column -->
+                    <tr>
+                        <td style="border-bottom: none;" colspan="2">
+                            <label for="">Prepaid [Weight Charge]</label>
+                            <textarea rows="4" placeholder="Prepaid"></textarea>                        
+                        </td>
+                        <td style="border-bottom: none;" colspan="4">
+                            <label for="">Collect [Weight Charge]</label>
+                            <textarea rows="4" placeholder="Collect"></textarea>                        
+                        </td>
+                        <td style="border-bottom: none;" colspan="6">
+                            <label for="">Other Charges</label>
+                            <textarea rows="4" placeholder="Other Charges"></textarea>                        
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
